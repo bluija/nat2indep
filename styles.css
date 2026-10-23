@@ -1,0 +1,18 @@
+.introjs-skipbutton {
+    display: none !important;
+}
+
+.aiField:disabled .buttonCnf .btn {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: none;
+    }
+}
+
+.imageDisplay {
+    max-height: 50vh;
+}
+
