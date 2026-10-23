@@ -14,7 +14,7 @@ data saved as FirebaseID /
 3. trial: trial data
 */
 
-const debug = true;
+const debug = false;
 
 // constants
 const numTrial = 30;
