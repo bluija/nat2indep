@@ -184,7 +184,7 @@ const resetTrial = async () => {
     questionCat.textContent = "Thinking...";
     imageDisplay.src = trialData.path;
 
-    await sleep(1000);
+    await sleep(2000);
 
     questionCat.textContent = trialData.aiAns;
 
@@ -241,8 +241,8 @@ startButton.onclick = async () => {
             title: "Answer",
             element: humanForm,
             intro:
-                "<p>Select <strong>Correct</strong> if the name matches the photo, or <strong>Wrong</strong> " +
-                "if it doesn't. Then click <strong>Submit</strong>.</p>",
+                `<p>Select <strong>Correct</strong> if the name matches the photo, or <strong>Wrong</strong> if it doesn't. Then click <strong>Submit</strong>.</p>
+             <p>Feedback will <strong>not</strong> be given</p>`,
         },
         {
             title: "Ready",
