@@ -222,10 +222,14 @@ startButton.onclick = async () => {
     let intro = introJs();
     let steps = [
         {
-            title: "Task",
+            title: "Aim",
             intro:
-                `<p>You'll get ${numTrial} photos of Plants 🌱 or Fungi 🍄 with a species name. Decide whether the name matches the photo.</p>
-             <p><strong>Use only your own knowledge</strong>: no search engines or AI. It's okay not to know; make your best guess.</p>`,
+                `<p>You'll get ${numTrial} photos of Plants 🌱 or Fungi 🍄, each with a species name. Decide whether the name matches the photo.</p>`
+        },
+        {
+            title: "Important",
+            intro:
+                "<p>Use only <strong>your own knowledge</strong>: no search engines or AI.</p>"
         },
         {
             title: "Plants 🌱",
@@ -241,13 +245,17 @@ startButton.onclick = async () => {
             title: "Answer",
             element: humanForm,
             intro:
-                `<p>Select <strong>Correct</strong> if the name matches the photo, or <strong>Wrong</strong> if it doesn't. Then click <strong>Submit</strong>.</p>
-             <p>Feedback will <strong>not</strong> be given</p>`,
+                `<p>Select <strong>Correct</strong> if the species name matches the photo, or <strong>Wrong</strong> if it doesn't. Then click <strong>Submit</strong>.</p>
+             <p>You won't be told whether your answers are right or not.</p>`,
+        },
+        {
+            title: "Reminder",
+            intro:
+                "<p>It's okay not to know, so make your best guess. Do <strong>not</strong> use AI or search engines.</p>"
         },
         {
             title: "Ready",
-            element: trial,
-            intro: "<p>The counter shows your progress. Let's begin!</p>",
+            intro: "<p>Let's begin!</p>",
         },
     ];
     intro
@@ -260,7 +268,7 @@ startButton.onclick = async () => {
         })
         .onbeforechange(() => {
             let step = intro.currentStep();
-            let chxIdx = 1;
+            let chxIdx = 2;
 
             if (step === chxIdx) {
                 displayTrial("Plants");
